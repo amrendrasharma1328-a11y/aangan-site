@@ -393,6 +393,25 @@ footer {
     gap: 6px
 }
 
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    align-items: center
+}
+
+.contact-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap
+}
+
+.contact-name,
+.contact-number {
+    white-space: nowrap
+}
+
 .copy {
     text-align: center;
     font-size: 12px;
