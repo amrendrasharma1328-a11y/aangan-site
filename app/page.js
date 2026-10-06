@@ -1,5 +1,6 @@
 import Socials from "@/components/Socials";
 import NotifyForm from "@/components/NotifyForm";
+import Nav from "@/components/Nav";
 import { MailIcon } from "@/components/Icons";
 import { SITE } from "@/lib/config";
 
@@ -9,27 +10,7 @@ export default function Home() {
       <header className="hero">
         <div className="bg bgL" />
         <div className="bg bgR" />
-        <nav>
-          <a className="logo" href="#">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="logoimg" src="/images/logo.webp" alt="Aangan logo" />
-            INDIA&apos;S EXPERIENTIAL
-            <br />
-            ENTERTAINMENT COMPANY
-          </a>
-          <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#what">WHAT WE DO</a></li>
-            <li><a href="#">ARTISTS</a></li>
-            <li><a href="#">PARTNERS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-          <div className="navr">
-            <span className="pill">COMING SOON</span>
-            <Socials />
-          </div>
-        </nav>
+        <Nav />
         <div>
           <div className="arch" />
           <h1>AANGAN</h1>
@@ -178,11 +159,14 @@ export default function Home() {
                 {SITE.email}
               </a>
             </p>
-            {SITE.phoneNumbers.map((phone) => (
-              <p key={phone.number} style={{ marginTop: 8 }}>
-                <a href={phone.href}>{phone.number}</a>
-              </p>
-            ))}
+            <div className="contact-list">
+              {SITE.phoneNumbers.map((phone) => (
+                <a key={phone.number} className="contact-row" href={phone.href}>
+                  <span className="contact-name">{phone.name}</span>
+                  <span className="contact-number">{phone.number}</span>
+                </a>
+              ))}
+            </div>
           </div>
           <div>
             <h4>FOLLOW OUR JOURNEY</h4>
