@@ -1,6 +1,6 @@
 // Google Sheet ke andar: Extensions -> Apps Script me ye poora paste karo.
 // SECRET wahi rakho jo Vercel me SHEET_SECRET me daaloge.
-const SECRET = "CHANGE_THIS_SECRET";
+const SECRET = "CHANGE_THIS_SECRET_TARUNKUSHWAHA";
 const SHEET_NAME = "Subscribers";
 
 function doPost(e) {
