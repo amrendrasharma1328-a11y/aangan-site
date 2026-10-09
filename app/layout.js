@@ -1,10 +1,11 @@
+
 import "./globals.css";
 
 export const metadata = {
   title: "Aangan – India's Experiential Entertainment Company",
   description:
     "Aangan is an experiential entertainment company based in Bhopal and Indore, creating live experiences across music, culture and youth.",
-  icons: { icon: "/images/logo.webp" },
+  metadataBase: new URL("https://aanganlive.in"),
 };
 
 export const viewport = {
