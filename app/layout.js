@@ -1,11 +1,41 @@
 
 import "./globals.css";
 
+const TITLE = "Aangan – India's Experiential Entertainment Company";
+const DESCRIPTION =
+  "Aangan is an experiential entertainment company based in Bhopal and Indore, creating live experiences across music, culture and youth.";
+
 export const metadata = {
-  title: "Aangan – India's Experiential Entertainment Company",
-  description:
-    "Aangan is an experiential entertainment company based in Bhopal and Indore, creating live experiences across music, culture and youth.",
   metadataBase: new URL("https://aanganlive.in"),
+  title: TITLE,
+  description: DESCRIPTION,
+  keywords: [
+    "Aangan",
+    "Aangan live",
+    "experiential entertainment",
+    "live events Bhopal",
+    "live events Indore",
+    "music events",
+  ],
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "https://aanganlive.in",
+    siteName: "Aangan",
+    images: [{ url: "/images/logo.webp" }],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/logo.webp"],
+  },
+  // Search Console "HTML tag" method se verify karna ho to yahan code daalo:
+  // verification: { google: "YAHAN_APNA_CODE" },
 };
 
 export const viewport = {
